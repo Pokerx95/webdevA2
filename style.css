@@ -1,0 +1,456 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*set to similar font as they are headers*/
+header h1,
+nav,
+h2,
+h3,
+#typeList {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+/* before header*/
+/*an overlay of the background so that text is more visible*/
+header:before {
+    content: "";
+    /*Take size of parent container*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    opacity: 0.4;
+    /* make text more visible*/
+    z-index: -2;
+    /* infront of background image, behind text*/
+}
+
+/*setting font size of header*/
+header h1 {
+    font-size: 8vw;
+}
+
+/*animated fading background*/
+.background-container {
+    /*Take size of parent container*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /*appear behind all elements*/
+    z-index: -5;
+}
+
+.background {
+    /*Take size of parent container*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /*not let image stretch*/
+    object-fit: cover;
+
+    /* one image shown at a time*/
+    opacity: 0;
+    /* 0 at beginning*/
+    transition: opacity 1s ease-in-out;
+}
+
+/* one image shown at a time*/
+.showing {
+    opacity: 1;
+    /*make transition nicer and avoid showing background color*/
+    z-index: -2;
+    transition: none;
+}
+
+/*Navigation Bar */
+nav {
+    padding-top: 1vh;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* make items more organised and spaced out*/
+    list-style-type: none;
+    /* Remove bullets */
+    font-size: 1.5vw;
+}
+
+nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.5vw 0px;
+    background-color: black;
+    color: white;
+}
+
+nav a:hover, #typeList a:hover, .backtotop:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/*for responsive menu*/
+#hamIcon {
+    display: none;
+    width:100%;
+}
+
+/*Pages and Content*/
+
+.page {
+    /*Get A Space Around Content*/
+    border: 1vw solid black;
+    padding: 3vh 2vw;
+    background-color: white;
+    ;
+}
+
+h2 {
+    font-size: 5vw;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
+/*elements with flex display*/
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/*page 1: What are birds*/
+.interaction {
+    /*leave a bit od space from the top*/
+    padding-top: 1vh;
+
+}
+
+/*image and buttons*/
+
+.imageholder {
+    position: relative;
+    flex: 1;
+}
+
+.imageholder img {/*take up all the space within parent container*/
+    width: 100%;
+
+}
+
+.partsbtn {
+    position: absolute;
+    /*position relative to parent container*/
+}
+
+/* Each Button positioning*/
+#partsF {
+    /*Feather*/
+    top: 250px;
+    left: 400px;
+}
+
+#partsB {
+    /*Beak*/
+    top: 80px;
+    left: 120px;
+}
+
+#partsS {
+    /*Skeleton*/
+    top: 80px;
+    left: 300px;
+}
+
+#partsH {
+    /*heart*/
+    top: 200px;
+    left: 140px;
+}
+
+
+
+/*description*/
+.desc {
+    padding-left: 10px;
+    border: 3px solid black;
+    flex: 1;
+}
+
+h3 {
+    font-size: 3vw;
+}
+
+
+/*Page 2: History With Human*/
+/*Description*/
+#page2 .flex p {
+    flex: 6;
+}
+
+#page2 .flex .images {
+    flex: 4;
+}
+
+/*Flappy Bird Game*/
+#game {
+    width: 400px;
+    height: 500px;
+    border: 5px solid black;
+    /*Ceneter To Browser*/
+    margin: auto;
+
+    /*Can't see blocks that go outside game*/
+    overflow: hidden;
+
+    position: relative;
+}
+
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: rgb(0, 255, 68);
+
+    /*Pillars Come from right side of screen*/
+    position: relative;
+    left: 400px;
+}
+
+
+/*animate block from right to left*/
+@keyframes block {
+    0% {
+        left: 400px
+    }
+
+    100% {
+        left: -50px
+    }
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+
+
+    /*Pillars Come from right side of screen*/
+    position: relative;
+    left: 400px;
+    top: -500px;
+    /*place at the top*/
+}
+
+.gameanimate {
+    /*animation*/
+    animation: block 2s infinite linear;
+    /*goes on forever at the same rate*/
+}
+
+/*character*/
+#character {
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+
+/*score*/
+#score{
+    /*place top right*/
+    position:absolute;
+    top:0px;
+    right: 5px;
+}
+
+/*prompt*/
+#prompt{
+    /*position at center*/
+    position: absolute;
+    top:200px;
+    left:150px;
+}
+
+
+/*Page 3: Evolution*/
+h3 {
+    text-align: center;
+}
+
+.era {
+    padding: 50vh 10vw;
+}
+
+.era .flex {
+    /*give spacing between title*/
+    padding-top: 5vh;
+    align-items: center;
+    /*align vertically to center*/
+}
+
+.era p,
+.era img {
+    flex: 1;
+    /*equal spacing*/
+}
+
+.era p{
+    padding-right: 2vw;/*space between image*/
+    font-size: 2vw;
+}
+
+.era img {
+    width: 100%;
+}
+
+
+.hidden{
+    opacity: 0;/*make element invisible*/
+    filter: blur(5px);/*blur to not blur*/
+    transform: translateX(-100%);/*left to center*/
+    /*animation: fade in*/
+    transition: all 1.5s;
+}
+
+.show{
+    opacity: 1;/*visible*/
+    filter: blur(0);
+    transform:translateX(0);
+}
+
+/*put a little delay on each element in era*/
+.era p{
+    transition-delay: 200ms;
+}
+.era img{
+    transition-delay: 400ms;
+}
+
+.backtotop{
+    display:block;/*a element scale can't be changed without this*/
+    width:100%;
+    background-color: rgb(39, 38, 38);
+    color:white;
+    font-size:1.5vw;
+    text-align: center;
+}
+
+/*Page 4: Bird Types(share similar attributes with navigation bar*/
+/* navigation for types */
+#typeList{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none; /* Remove bullets */
+
+    /*black background*/
+    background-color: black;
+    /*white text*/
+    color: white;
+    /*centre text*/
+    text-align: center;
+    /*size*/
+    font-size: 2vw;
+}
+
+#typeList li, #typeList a{
+    display:block;/*make it possible to adjust*/
+    width: 100%;/*take entire width possible*/
+}
+
+
+/*outline to see boxes better*/
+#page4 .flex{
+    border: 3px solid black;
+}
+
+/*content box of types*/
+#page4 img{
+    flex: 2;
+    width: 100%;/*take up entire width of parent*/
+}
+#page4 p{
+    flex: 3;
+}
+
+/*Responsiveness*/
+@media screen and (max-width:800px) {
+    /*for javascript use*/
+    #menuList.menuShow {/*only applies to when within max width*/
+        display: block;
+    }
+    header h1{
+        font-size:3.5em;
+    }
+
+    /*navigation menuList font size*/
+    nav a{
+        font-size: 2.5vh;
+    }
+
+    /*for all p elements*/
+    p  {
+        font-size: 1.3em;
+    }
+    
+    /*make a menu items vertical*/
+    #hamIcon {
+        display: block;
+    }
+
+    /* unhide menu icon */
+    nav ul {
+        display: none;
+    }
+
+    /*page 1*/
+    .flex {
+        flex-direction: column;
+    }
+
+    .desc {
+        padding-left: 0px;
+    }
+
+
+    /*page 3*/
+    .era p{
+        padding-right: 0px;
+        font-size: 1.5em;
+    }
+
+    .era h3{
+        font-size: 1.7em;
+    }
+
+    /*page 4*/
+    #typeList {
+        flex-direction: column;
+    }
+}
+

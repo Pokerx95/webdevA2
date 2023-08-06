@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonders Of Birds</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/bird_icon.png">
+    <!--Icon-->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!--Top Of Webpage-->
+        <h1>Wonders Of Birds</h1>
+        <p>"A heart without dreams is like a bird without feathers." -Suzy Kassem</p>
+        <!--Transition Background Image for header-->
+        <div class="background-container">
+            <img class="showing background" src="images/bg_bird.jpg" alt="Picture of Parot">
+            <img class="background" src="images/bg_bird2.jpg" alt="Picture of four bird">
+            <img class="background" src="images/bg_bird3.jpg" alt="Picture of Swan">
+            <img class="background" src="images/bg_bird4.jpg" alt="Picture of Sparrow">
+        </div>
+    </header>
+    <nav> <!--menu system-->
+        <button id="hamIcon">
+            <img src="images/hamburger_icon.png" alt="Hamburger Icon">
+        </button>
+        <ul id="menuList">
+            <li><a id="page1btn">What Are Birds?</a></li>
+            <li><a id="page2btn">History With Humans</a></li>
+            <li><a id="page3btn">Evolution</a></li>
+            <li><a id="page4btn">Different Types and Species</a></li>
+        </ul>
+    </nav>
+
+    <div id="pagecontainer">
+        <!-- This is page 1 -->
+        <div class="page" id="page1">
+            <h2>What Are Birds?</h2>
+            <hr>
+            <!--Description-->
+            <p>Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers,
+                toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart,
+                and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5.5 cm (2.2 in)
+                bee hummingbird to the 2.8 m (9 ft 2 in) common ostrich.</p>
+            <p>Interact with the image below to find out more!</p>
+            <hr>
+            <div class="interaction flex">
+                <!--Interaction Part For Page 1-->
+                <div class="imageholder">
+                    <!--Image Of Bird-->
+                    <img src="images/page1_bird.jpg" alt="Image of A BLue Bird Looking Left">
+                    <!--Buttons To Show Bird Parts-->
+                    <button class="partsbtn" id="partsF">Feathers</button>
+                    <button class="partsbtn" id="partsB">Beak</button>
+                    <button class="partsbtn" id="partsS">Skeleton</button>
+                    <button class="partsbtn" id="partsH">Four Chambered Heart</button>
+                </div>
+                <div class="desc">
+                    <!--Desciption for parts of bird-->
+                    <div class="partdesc">
+                        <h3>Feathers</h3>
+                        <p>Each feather on a bird's body is a finely tuned structure that serves an important role in
+                            the bird's activities. Feathers allow birds to fly, but they also help them show off, blend
+                            in, stay warm, and keep dry.</p>
+                        <p><a href="https://academy.allaboutbirds.org/feathers-article/" target="_blank">Learn More</a></p>
+                    </div>
+                    <div class="partdesc">
+                        <h3>Beak</h3>
+                        <p>A bird beak is the most important resource it has, and every species has one solely designed
+                            for survival. Birds use beaks for just about everything: building nests, feeding their
+                            young, cleaning their feathers, defending themselves and eating.</p>
+                        <p><a href="https://www.birdsandblooms.com/birding/birding-basics/types-of-bird-beaks/" target="_blank">Learn
+                                More</a></p>
+                    </div>
+                    <div class="partdesc">
+                        <h3>Lightweight But Strong Skeleton</h3>
+                        <p>The skeletons of birds (and other flying vertebrates) need to be lightweight to minimize the
+                            metabolic cost of flight, and at the same time strong enough to withstand the forces
+                            encountered during flight. The same trade-off applies to manmade airframes.</p>
+                        <p><a href="https://royalsocietypublishing.org/doi/10.1098/rspb.2010.0117" target="_blank">Learn More</a></p>
+                    </div>
+                    <div class="partdesc">
+                        <h3>Four Chambered Heart</h3>
+                        <p>Birds have 4-chambered hearts made of the right atrium, right ventricle, left atrium and left
+                            ventricle. The division helps for efficient flow of oxygenated and deoxygenated blood. Birds
+                            also have specific adaptations for flight, including a larger heart relative to body weight
+                            and a faster heart rate.</p>
+                        <p><a href="https://study.com/academy/lesson/bird-circulatory-system-function-structure.html" target="_blank">Learn
+                                More</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- This is end page 1 -->
+        <!-- This is page 2 -->
+        <div class="page" id="page2">
+            <h2>History With Humans</h2>
+            <hr>
+            <div class="flex">
+                <!--Description-->
+                <p>The most common interaction with human is that birds were use as food to sustain humans, like your
+                    favourite fried chicken from KFC. Birds were also used in entertainment and their feathers were
+                    collected for clothing and fashion. From the Middle Ages to the 1800s, carrier pidgeons were use for
+                    commerce, navigation and especially in the armed forces where they send messages to and fro and even
+                    to the enemies.</p>
+                <div class="images">
+                    <img src="images/page2_birdstyle.jpg" alt="Image Of Bird Feathers Used For Hats">
+                    <img src="images/page2_chichkenfood.jpg" alt="Image Of Bird As Food: Fried Chicken">
+                </div>
+            </div>
+            <hr>
+            <h3>Help Deliver Important Information To Allies While Dodging Obstacles !</h3>
+            <div id="game">
+                <!--Flappy Bird Game-->
+                <div id="block"></div>
+                <div id="hole"></div>
+                <div id="score">Score: 0</div>
+                <div id="prompt">Click To Play</div>
+                <img src="images/page2_birdgame.png" alt="Picture of bird character for game" id="character">
+            </div>
+        </div>
+        <!-- This is end page 2 -->
+        <!-- This is page 3 -->
+        <div class="page" id="page3">
+            <h2>Evolution</h2>
+            <hr>
+            <!--Description-->
+            <p>Birds are feathered theropod dinosaurs and constitute the only known living dinosaurs. Likewise, birds
+                are considered reptiles in the modern cladistic sense of the term, and their closest living relatives
+                are the crocodilians. Birds are descendants of the primitive avialans (whose members include
+                Archaeopteryx) which first appeared during the Late Jurassic. According to DNA evidence, modern birds
+                (Neornithes) evolved in the Early to Late Cretaceous, and diversified dramatically around the time of
+                the Cretaceous–Paleogene extinction event 66 mya, which killed off the pterosaurs and all non-avian
+                dinosaurs. Below shows the time period of their evolution.</p>
+            <hr>
+            <!--Eras which will animate in when scrolled pass-->
+            <div class="era">
+                <h3 class="hidden">Paleozoic Era (541-252 million years ago)</h3>
+                <div class="flex">
+                    <p class="hidden">The birds in the Paleozoic Era weren't very "bird-like," they looked more like
+                        dinosaurs, which
+                        were called Archosaurs. Although eventually they evolved into crocodiles and birds that we have
+                        today! They did this to help themselves have easier lives as time went on.</p>
+                    <img src="images/page3_paleozoicera.jpg" alt="Image Of Bird From Paleozoic Era" class="hidden">
+                </div>
+            </div>
+
+            <div class="era">
+                <h3 class="hidden">Mesozoic Era (52 to 66 million years ago)</h3>
+                <div class="flex">
+                    <p class="hidden">The birds had changed in many ways to help themselves do things like hunt,
+                        survive, and etc.
+                        Their bodies became slimmer, they developed more feathers and longer wings. Possibly to help
+                        provide a method to protect themselves.</p>
+                    <img src="images/page3_mesozoicera.jpeg" alt="Image Of Bird From Mesozoic Era" class="hidden">
+                </div>
+            </div>
+
+            <div class="era">
+                <h3 class="hidden">Cenozoic Era (144 million years ago and is still going on today.)</h3>
+                <div class="flex">
+                    <p class="hidden">We now have many different breeds of birds because of how the birds evolved to
+                        their
+                        surroundings.
+                        For example: A bird who lived in a colder climate would develop feather to help protect
+                        themselves
+                        from the cold while a bird that lived in a warmer climate might have less feathers.</p>
+                    <img src="images/page3_cenozoicera.jpeg" alt="Image Of Bird From Cenozoic Era" class="hidden">
+                </div>
+            </div>
+            <!--Go Back UP To Navigation Bar. This Is The Only One As Only This Section Goes Down A Longer Time Compared To The Other Sections-->
+            <a class="backtotop" href="#menuList">Back To The Top</a>
+        </div>
+        <!-- This is end page 3 -->
+        <!-- This is page 4 -->
+        <div class="page" id="page4">
+            <h2>Different Types and Species</h2>
+            <hr>
+            <ul id="typeList">
+                <!--Mini navigation system that shows the different types of birds-->
+                <li><a id="type1">Myna</a></li>
+                <li><a id="type2">Crow</a></li>
+                <li><a id="type3">Penguin</a></li>
+                <li><a id="type4">Ostritch</a></li>
+            </ul>
+            <div class="flex type"><!--Description for all types of bird-->
+                <p>Mynas are medium-sized passerines with strong feet. Their flight is strong and direct, and they
+                    are
+                    gregarious. Their preferred habitat is fairly open country, and they eat insects and fruit. Plumage
+                    is
+                    typically dark, often brown, although some species have yellow head ornaments. (very common in
+                    Singapore)</p>
+                    <img src="images/page4_myna.jpg" alt="Picture Of A Myna">
+            </div>
+            <div class="flex type">
+                <p>Crows completely black birds weighing on average 450 g. The feathers have a glossy and slightly
+                    iridescent look. Crows have strong legs and toes. The bill is also black with a slight hook on the
+                    end.
+                    Crows are omnivorous and eat whatever is available—insects, spiders, snails, fish, snakes, eggs,
+                    nestling birds, cultivated fruits, nuts, and vegetables. They also scavenge dead animals and
+                    garbage.
+                    Crows are known to drop hardshelled nuts onto a street, and then wait for passing automobiles to
+                    crack
+                    them.(Scavengers/ Predator)</p>
+                    <img src="images/page4_crow.jpg" alt="Image Of A Crow">
+            </div>
+            <div class="flex type">
+                <p>Penguins curious creatures that are always exploring their surroundings. In addition, penguins are
+                    friendly animals that enjoy social interaction. Penguins are determined and fearless, willing to
+                    face
+                    any challenge, despite their inability to fly. Their adaptability is evident in their ability to
+                    thrive
+                    in different climates. eat krill, squids, and fishes. Their diet varies slightly on the species of
+                    penguins, which have slightly different food preferences. This reduces competition among species.
+                    The
+                    smaller penguin species of the Antarctic and the subantarctic primarily feed on krill and
+                    squids.(cannot
+                    fly, live in cold weathers)</p>
+                    <img src="images/page4_penguin.jpg" alt="Image Of A Penguin">
+            </div>
+            <div class="flex type">
+                <p>Ostritch are large flightless birds. They are the heaviest living birds, and lay the largest eggs of
+                    any
+                    living land animal. With the ability to run at 70 km/h (43.5 mph), they are the fastest birds on
+                    land.
+                    They are farmed worldwide, with significant industries in the Philippines and in Namibia.re
+                    omnivores.
+                    Their diet varies depending on the food available in their habitat. They primarily eat plants, but
+                    also
+                    eat insects, snakes, lizards and rodents. They are able to consume things that other animals can't
+                    digest because they have tough intestines to absorb as many nutrients as possible.(biggest bird,
+                    cannot
+                    fly)</p>
+                    <img src="images/page4_ostritch.jpg" alt="Image Of A Ostritch">
+            </div>
+        </div>
+        <!-- This is end page 4 -->
+    </div>
+</body>
+
+</html>
