@@ -122,9 +122,9 @@ var score = 0;
 
 //audio
 const flyaudio = new Audio();
-flyaudio.src = "audio/Sound_Fly.ogg";
+flyaudio.src = "audio/sound_fly.ogg";
 const fallaudio = new Audio();
-fallaudio.src = "audio/Sound_Fall.ogg"
+fallaudio.src = "audio/sound_fall.ogg"
 
 /*jump*/
 var jumping = 0;
@@ -264,13 +264,13 @@ function showtype(pgno) { //function to show selected page no
 
 //audio for bird chirps
 const mynaaudio = new Audio();
-mynaaudio.src = "audio/Sound_Myna.mp3";
+mynaaudio.src = "audio/sound_myna.mp3";
 const crowaudio = new Audio();
-crowaudio.src = "audio/Sound_Crow.mp3";
+crowaudio.src = "audio/sound_crow.mp3";
 const penguinaudio = new Audio();
-penguinaudio.src = "audio/Sound_Penguin.mp3";
+penguinaudio.src = "audio/sound_penguin.mp3";
 const ostritchaudio = new Audio();
-ostritchaudio.src = "audio/Sound_Ostritch.mp3";
+ostritchaudio.src = "audio/sound_ostritch.mp3";
 
 /*listener for this page*/
 /*Listen for clicks on the buttons, assign anonymous
